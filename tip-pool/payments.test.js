@@ -12,14 +12,15 @@ describe("submitPaymentInfo", () => {
     })
   
     afterEach(() => {
-      delete allPayments["payment" + paymentId];
-      paymentTbody.remove();
-      paymentId = 0;
       billAmtInput.value = '';
       tipAmtInput.value = '';
+      paymentTbody.innerHTML = '';
       summaryTds[0].innerHTML = '';
       summaryTds[1].innerHTML = '';
       summaryTds[2].innerHTML = '';
+      serverTbody.innerHTML = '';
+      paymentId = 0;
+      allPayments = {};
     })
     })
   
